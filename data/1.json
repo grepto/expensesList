@@ -1,0 +1,20 @@
+[
+  {
+    "id": 0,
+    "name": "СМС",
+    "value": 99,
+    "isCompensated": true
+  },
+  {
+    "id": 1,
+    "name": "Обслуживание счета",
+    "value": 1990,
+    "isCompensated": true
+  },
+  {
+    "id": 4,
+    "name": "Конфлюенс",
+    "value": 1348.99,
+    "isCompensated": true
+  }
+]

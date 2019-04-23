@@ -1,0 +1,38 @@
+[
+  {
+    "id": 0,
+    "isCompensated": false,
+    "name": "СМС",
+    "value": 99
+  },
+  {
+    "id": 1,
+    "name": "Обслуживание счета",
+    "value": 1990,
+    "isCompensated": false
+  },
+  {
+    "id": 2,
+    "name": "УСН за первый квартал ",
+    "value": 19252.86,
+    "isCompensated": false
+  },
+  {
+    "id": 4,
+    "name": "Конфлюенс",
+    "value": 1293.71,
+    "isCompensated": false
+  },
+  {
+    "id": 5,
+    "name": "Не очень херовая ручка",
+    "value": 99,
+    "isCompensated": false
+  },
+  {
+    "id": 3,
+    "name": "Органайзер для проводов IKEA",
+    "value": 699,
+    "isCompensated": true
+  }
+]
