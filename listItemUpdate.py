@@ -3,6 +3,7 @@ from listItemAdd import listItemAdd
 
 
 def listItemUpdate(listId=3, itemId=3, name='Новый элемент списка', value=0, isCompensated=False):
+    """"Обновляет элемент списка"""
 
     listItemDelete(listId, itemId)
     listItemAdd(listId, name, value, isCompensated, itemId)
@@ -10,5 +11,5 @@ def listItemUpdate(listId=3, itemId=3, name='Новый элемент спис�
     return
 
 
-listItemUpdate(3, 3, 'Органайзер для проводов IKEA', 699, True)
+# listItemUpdate(3, 3, 'Органайзер для проводов IKEA', 899, True)
 

@@ -25,14 +25,14 @@
   },
   {
     "id": 5,
-    "name": "Не очень херовая ручка",
+    "name": "Вообще херовая ручка",
     "value": 99,
     "isCompensated": false
   },
   {
     "id": 3,
     "name": "Органайзер для проводов IKEA",
-    "value": 699,
+    "value": 899,
     "isCompensated": true
   }
 ]

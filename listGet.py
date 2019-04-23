@@ -1,11 +1,19 @@
 import json
+from _settings import listsFile, fileDir
 
 def listGet(listId = 3):
-    with open('data/lists.json', 'r', encoding='utf-8') as f:  # открываем файл на чтение
-        listHead = json.load(f)  # загружаем из файла данные в словарь settings
+    """"Возвращает JSON модель списка. В начале идут атрибуты списка, затем массив элементов."""
 
-    with open ('data/'+str(listId)+'.json', 'r', encoding='utf-8') as f:
-        listData = json.load(f)
+    fileName = fileDir + str(listId)+'.json'
+
+    with open(listsFile, 'r', encoding='utf-8') as f:
+        listHead = json.load(f)
+
+    try:
+        with open(fileName, 'r', encoding='utf-8') as f:
+            listData = json.load(f)
+    except FileNotFoundError:
+        listData = list()
 
     listData = sorted(listData, key=lambda k: k['id'])
 
@@ -16,6 +24,5 @@ def listGet(listId = 3):
 
     return resultJson
 
-
-# print(listGet())
+# print(listGet(9))
 
