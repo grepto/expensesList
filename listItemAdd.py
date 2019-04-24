@@ -36,7 +36,7 @@ def listItemAdd(listId=3, name='Новый элемент списка', value=0
         result.update(newItem)
 
     else:
-        result = dict(isError=True, errorText=f'list id {listId} is not exists')
+        result = dict(isError=True, errorText=f'list id {listId} does not exists')
 
     return result
 

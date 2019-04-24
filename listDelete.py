@@ -24,7 +24,7 @@ def listDelete(listId = -1):
         if os.path.exists(fileName):
             os.remove(fileName)
     else:
-        result = dict(isError=True, errorText=f'list id {listId} is not exists')
+        result = dict(isError=True, errorText=f'list id {listId} does not exists')
 
     return result
 

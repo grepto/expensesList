@@ -20,7 +20,7 @@ def listGet(listId = 3):
     if len(listHead) > 0:
         result = dict(id=listId, name=listHead[0]['name'], totalValue=totalValue, lines=listContent)
     else:
-        result = dict(isError=True, errorText=f'list id {listId} is not exists')
+        result = dict(isError=True, errorText=f'list id {listId} does not exists')
 
     resultJson = json.dumps(result, ensure_ascii=False, indent=2)
 
