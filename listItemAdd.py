@@ -1,5 +1,5 @@
 import json
-from _settings import listsFile, fileDir
+from _settings import fileDir
 from _common import newId
 
 
