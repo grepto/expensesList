@@ -1,4 +1,5 @@
 import json
+from functools import reduce
 from _settings import listsFile, fileDir
 
 def listGet(listId = 3):
@@ -15,14 +16,22 @@ def listGet(listId = 3):
     except FileNotFoundError:
         listData = list()
 
-    listData = sorted(listData, key=lambda k: k['id'])
 
-    listResult = dict(id=listId, name=listHead[listId]['name'])
+    try:
+        listResult = dict(id=listId, name=listHead[listId]['name'])
+    except:
+        listResult = dict()
+
+    totalValue = sum(elem['value'] for elem in listData)
+    listResult['totalValue'] = totalValue
+
+    listData = sorted(listData, key=lambda k: k['id'])
     listResult['lines'] = listData
 
     resultJson = json.dumps(listResult, ensure_ascii=False, indent=2)
 
     return resultJson
 
-# print(listGet(9))
+
+print(listGet(3))
 
