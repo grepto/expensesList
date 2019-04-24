@@ -1,5 +1,4 @@
 import json
-from functools import reduce
 from _settings import listsFile, fileDir
 
 def listGet(listId = 3):
@@ -8,30 +7,24 @@ def listGet(listId = 3):
     fileName = fileDir + str(listId)+'.json'
 
     with open(listsFile, 'r', encoding='utf-8') as f:
-        listHead = json.load(f)
+        listHead = list(filter(lambda p: p['id'] == listId, json.load(f)))
 
     try:
         with open(fileName, 'r', encoding='utf-8') as f:
-            listData = json.load(f)
+            listContent = sorted(json.load(f), key=lambda k: k['id'])
     except FileNotFoundError:
-        listData = list()
+        listContent = list()
 
+    totalValue = sum(elem['value'] for elem in listContent)
 
-    try:
-        listResult = dict(id=listId, name=listHead[listId]['name'])
-    except:
-        listResult = dict()
+    if len(listHead) > 0:
+        result = dict(id=listId, name=listHead[0]['name'], totalValue=totalValue, lines=listContent)
+    else:
+        result = dict(isError=True, errorText=f'list id {listId} is not exists')
 
-    totalValue = sum(elem['value'] for elem in listData)
-    listResult['totalValue'] = totalValue
-
-    listData = sorted(listData, key=lambda k: k['id'])
-    listResult['lines'] = listData
-
-    resultJson = json.dumps(listResult, ensure_ascii=False, indent=2)
+    resultJson = json.dumps(result, ensure_ascii=False, indent=2)
 
     return resultJson
 
 
-print(listGet(3))
-
+# print(listGet(4))
