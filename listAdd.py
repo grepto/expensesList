@@ -22,9 +22,9 @@ def listAdd(name, items=None):
         for elem in items:
             listItemAdd(newListId, elem['name'], elem['value'], elem['isCompensated'])
 
-    return
+    return newListId
 
 
-items = [{'name': 'СМС-ки', 'value': 99, 'isCompensated': False},
-                           {'name': 'Обслуживание счета', 'value': 1990, 'isCompensated': False}]
-listAdd('Траты Пихтябрь', items)
+# items = [{'name': 'СМС-ки', 'value': 99, 'isCompensated': False},
+#                            {'name': 'Обслуживание счета', 'value': 1990, 'isCompensated': False}]
+# listAdd('Траты Пихтябрь', items)
