@@ -1,6 +1,6 @@
 import json
 from _settings import listsFile, fileDir
-from _common import maxId
+from _common import newId
 
 
 def listItemAdd(listId=3, name='Новый элемент списка', value=0, isCompensated=False, itemId=0):
@@ -19,7 +19,7 @@ def listItemAdd(listId=3, name='Новый элемент списка', value=0
         with open(fileName, 'w', encoding='utf-8') as f:
             listData=list()
 
-    newItemId = itemId if itemId != 0 else maxId(listData) + 1
+    newItemId = itemId if itemId != 0 else newId(listData)
     listData.append(dict(id=newItemId, name=name, value=value, isCompensated=isCompensated))
     resultJson = json.dumps(listData, ensure_ascii=False, indent=2)
 
