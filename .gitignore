@@ -1,3 +1,6 @@
+data/*
+__test*
+
 .idea/
 
 # Byte-compiled / optimized / DLL files
