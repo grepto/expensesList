@@ -2,7 +2,7 @@
 
 
 def newId(listData):
-    """Возвращает максимальный id в списке."""
+    """Возвращает id который нужно присвоить следующему элементу."""
     try:
         tempList = list()
         for item in listData:
