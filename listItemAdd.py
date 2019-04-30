@@ -1,6 +1,6 @@
 import json
 from _settings import fileDir, commonResult, listsFile
-from _common import newId
+from _common import newId, error
 
 
 def listItemAdd(listId=3, name='Новый элемент списка', value=0, isCompensated=False, itemId=0):
@@ -36,10 +36,10 @@ def listItemAdd(listId=3, name='Новый элемент списка', value=0
         result.update(newItem)
 
     else:
-        result = dict(isError=True, errorText=f'list id {listId} does not exists')
+        result = error(1, listId)
 
     return result
 
-# print(listItemAdd(199, 'Вообще херовая ручка', 99))
+# print(listItemAdd(3, 'Вообще херовая ручка', 99))
 
 

@@ -13,5 +13,5 @@ def listItemUpdate(listId=3, itemId=3, name='Новый элемент спис�
     return result
 
 
-# print(listItemUpdate(3, 3, 'Органайзер для проводов IKEA', 899, True))
+# print(listItemUpdate(3, 33, 'Органайзер для проводов IKEA', 899, True))
 

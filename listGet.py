@@ -1,5 +1,6 @@
 import json
 from _settings import listsFile, fileDir, commonResult
+from _common import error
 
 def listGet(listId = 3):
     """"Возвращает JSON модель списка. В начале идут атрибуты списка, затем массив элементов."""
@@ -22,11 +23,11 @@ def listGet(listId = 3):
         resultList = dict(id=listId, name=listHead[0]['name'], totalValue=totalValue, lines=listContent)
         result.update(resultList)
     else:
-        result = dict(isError=True, errorText=f'list id {listId} does not exists')
+        result = error(1, listId)
 
     # resultJson = json.dumps(result, ensure_ascii=False, indent=2)
 
     return result
 
 
-# print(listGet(99))
+# print(listGet(5))

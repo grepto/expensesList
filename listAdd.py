@@ -27,6 +27,6 @@ def listAdd(name, items=None):
     return result
 
 
-items = [{'name': 'СМС-ки', 'value': 99, 'isCompensated': False},
-                           {'name': 'Обслуживание счета', 'value': 1990, 'isCompensated': False}]
-print(listAdd('Траты Пихтябрь', items))
+# items = [{'name': 'СМС-ки', 'value': 99, 'isCompensated': False},
+#                            {'name': 'Обслуживание счета', 'value': 1990, 'isCompensated': False}]
+# print(listAdd('Траты Пихтябрь', items))

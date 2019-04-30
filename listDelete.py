@@ -1,5 +1,6 @@
 import json
 import os
+from _common import error
 from _settings import listsFile, fileDir, commonResult
 
 
@@ -24,8 +25,8 @@ def listDelete(listId = -1):
         if os.path.exists(fileName):
             os.remove(fileName)
     else:
-        result = dict(isError=True, errorText=f'list id {listId} does not exists')
+        result = error(1, listId)
 
     return result
 
-# print(listDelete(4))
+# print(listDelete(66))
